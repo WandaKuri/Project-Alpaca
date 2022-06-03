@@ -26,7 +26,7 @@ public class AreaExit : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collided)
     {
         //collided = object that hits the exitBox 
-        if(collided.tag == "Player")
+        if (collided.CompareTag("Player"))
         {
             SceneManager.LoadScene(areaToLoad);
 
