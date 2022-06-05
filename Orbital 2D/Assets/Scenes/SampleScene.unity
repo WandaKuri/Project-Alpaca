@@ -290,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.74619466, y: 0.71, z: -10}
+  m_LocalPosition: {x: 2.180737, y: 0.70998996, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -391,7 +391,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.9312354, y: 1}
+    m_SensorSize: {x: 2.2181468, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -629,11 +629,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6419208074112838724, guid: d0ec826626fac6740971539c9549ede1, type: 3}
       propertyPath: areaToLoad
-      value: SampleTwo
+      value: ForestScene
       objectReference: {fileID: 0}
     - target: {fileID: 6419208074112838724, guid: d0ec826626fac6740971539c9549ede1, type: 3}
       propertyPath: areaTransitionName
-      value: Countryside-1
+      value: forest
       objectReference: {fileID: 0}
     - target: {fileID: 6419208074112838727, guid: d0ec826626fac6740971539c9549ede1, type: 3}
       propertyPath: m_RootOrder
