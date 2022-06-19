@@ -7,7 +7,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
 
-    public CinemachineVirtualCamera myCinemachine;
+    private CinemachineVirtualCamera myCinemachine;
     
     // Start is called before the first frame update
     void Start()
