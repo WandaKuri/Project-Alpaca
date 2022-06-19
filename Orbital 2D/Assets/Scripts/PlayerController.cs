@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D playerRigid;
     public float moveSpeed;
-
+    private LevelSystem LevelSystem = new LevelSystem();
     public Animator myAnimator;
 
     public static PlayerController instance;
