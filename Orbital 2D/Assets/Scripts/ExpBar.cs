@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,11 +8,10 @@ public class ExpBar : MonoBehaviour
 {
     public Slider slider;
 
-    // public ExpBar()
-    // {
-    //     this.slider.value = 0;
-    //     this.slider.maxValue = 100;
-    // }
+    private void Start()
+    {
+        this.slider = GetComponent<Slider>();
+    }
 
     public void SetExp(int experience)
     {
