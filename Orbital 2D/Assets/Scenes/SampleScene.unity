@@ -573,7 +573,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 66.3
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1115,6 +1115,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7589127571523405508, guid: e8c540eaa00270144b655ad679d3fa96, type: 3}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589127571523405508, guid: e8c540eaa00270144b655ad679d3fa96, type: 3}
+      propertyPath: expbar
+      value: 
+      objectReference: {fileID: 1063437837}
+    - target: {fileID: 7589127571523405508, guid: e8c540eaa00270144b655ad679d3fa96, type: 3}
+      propertyPath: experienceToNextLevel
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7589127571523405513, guid: e8c540eaa00270144b655ad679d3fa96, type: 3}
       propertyPath: m_RootOrder
       value: 2
