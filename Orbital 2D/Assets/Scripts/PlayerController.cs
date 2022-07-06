@@ -20,6 +20,11 @@ public class PlayerController : MonoBehaviour
     private static readonly int LastMoveX = Animator.StringToHash("lastMoveX");
     private static readonly int LastMoveY = Animator.StringToHash("lastMoveY");
 
+    private Transform bottomLeftBox;
+    private Transform topRightBox;
+    private Vector3 bottomLeftLimit;
+    private Vector3 topRightLimit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +37,11 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+
+        bottomLeftBox = GameObject.FindGameObjectWithTag("bottomLeft").transform;
+        topRightBox = GameObject.FindGameObjectWithTag("topRight").transform;
+        bottomLeftLimit = new Vector3(bottomLeftBox.position.x, bottomLeftBox.position.y, bottomLeftBox.position.z);
+        topRightLimit = new Vector3(topRightBox.position.x, topRightBox.position.y, topRightBox.position.z) ;
     }
 
     // Update is called once per frame
@@ -54,6 +64,8 @@ public class PlayerController : MonoBehaviour
             myAnimator.SetFloat(LastMoveX, Input.GetAxisRaw("Horizontal"));
             myAnimator.SetFloat(LastMoveY, Input.GetAxisRaw("Vertical"));
         }
+
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
     }
     
     
