@@ -13,6 +13,11 @@ public class ExpBar : MonoBehaviour
         this.slider = GetComponent<Slider>();
     }
 
+    private void Update()
+    {
+        
+    }
+
     public void SetExp(int experience)
     {
         this.slider.value = experience;
