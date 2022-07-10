@@ -11,11 +11,6 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
     public string areaTransitionName;
     
-    private static readonly int MoveX = Animator.StringToHash("moveX");
-    private static readonly int MoveY = Animator.StringToHash("moveY");
-    private static readonly int LastMoveX = Animator.StringToHash("lastMoveX");
-    private static readonly int LastMoveY = Animator.StringToHash("lastMoveY");
-
     private Transform bottomLeftBox;
     private Transform topRightBox;
     private Vector3 bottomLeftLimit;
@@ -44,19 +39,29 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         playerRigid.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveSpeed;
-        myAnimator.SetFloat(MoveX, playerRigid.velocity.x);
-        myAnimator.SetFloat(MoveY, playerRigid.velocity.y);
+        myAnimator.SetFloat("moveX", playerRigid.velocity.x);
+        myAnimator.SetFloat("moveY", playerRigid.velocity.y);
 
-        if (Mathf.Approximately(Input.GetAxisRaw("Horizontal"), 1)
-            || Mathf.Approximately(Input.GetAxisRaw("Horizontal"), -1)
-            || Mathf.Approximately(Input.GetAxisRaw("Vertical"), 1)
-            || Mathf.Approximately(Input.GetAxisRaw("Vertical"), -1))
+        if (Input.GetAxisRaw("Horizontal") == 1 
+            || Input.GetAxisRaw("Horizontal") == -1 
+            || Input.GetAxisRaw("Vertical") == 1 
+            || Input.GetAxisRaw("Vertical") == -1)
         {
-            myAnimator.SetFloat(LastMoveX, Input.GetAxisRaw("Horizontal"));
-            myAnimator.SetFloat(LastMoveY, Input.GetAxisRaw("Vertical"));
+            myAnimator.SetFloat("lastMoveX", Input.GetAxisRaw("Horizontal"));
+            myAnimator.SetFloat("lastMoveY", Input.GetAxisRaw("Vertical"));
         }
-
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
+        
+        if (Input.GetButtonDown("Attack"))
+        {
+            StartCoroutine(AttackCo());
+        }
     }
-    
+
+    private IEnumerator AttackCo()
+    {
+        myAnimator.SetBool("attacking", true);
+        yield return null;
+        myAnimator.SetBool("attacking", false);
+        yield return new WaitForSeconds(0.3f);
+    }
 }
