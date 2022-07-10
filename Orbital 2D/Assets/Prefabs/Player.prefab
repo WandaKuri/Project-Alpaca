@@ -102,9 +102,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.18}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!50 &7589127571523405515
 Rigidbody2D:
   serializedVersion: 4
@@ -142,10 +142,6 @@ MonoBehaviour:
   moveSpeed: 5
   myAnimator: {fileID: 7589127571523405509}
   areaTransitionName: 
-  level: 1
-  experience: 0
-  experienceToNextLevel: 100
-  expbar: {fileID: 6581551855746161258, guid: 4f8d846a65a0e4e5cb9ee729cddd5527, type: 3}
 --- !u!114 &4226201931139527169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70599e2bbb2f43ffb1fed145d79a114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
+  experience: 0
+  experienceToNextLevel: 100
 --- !u!95 &7589127571523405509
 Animator:
   serializedVersion: 4

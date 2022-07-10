@@ -111,8 +111,8 @@ TextureImporter:
         y: 960
         width: 480
         height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -132,8 +132,8 @@ TextureImporter:
         y: 960
         width: 480
         height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -153,8 +153,8 @@ TextureImporter:
         y: 960
         width: 480
         height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -174,8 +174,8 @@ TextureImporter:
         y: 960
         width: 480
         height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -195,8 +195,8 @@ TextureImporter:
         y: 960
         width: 480
         height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -216,8 +216,8 @@ TextureImporter:
         y: 480
         width: 480
         height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.49999997, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,12 +233,12 @@ TextureImporter:
       name: Slime Idle_6
       rect:
         serializedVersion: 2
-        x: 480
+        x: 475
         y: 480
         width: 480
         height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,12 +254,12 @@ TextureImporter:
       name: Slime Idle_7
       rect:
         serializedVersion: 2
-        x: 960
+        x: 955
         y: 480
         width: 480
         height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.50000024, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -279,8 +279,8 @@ TextureImporter:
         y: 480
         width: 480
         height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -300,14 +300,14 @@ TextureImporter:
         y: 480
         width: 480
         height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b8254895049c42fa81aa057d740aeb7
+      spriteID: 42d74dbe54bfc4598887a4d215cd3957
       internalID: -1160258275
       vertices: []
       indices: 
@@ -321,14 +321,14 @@ TextureImporter:
         y: 0
         width: 480
         height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.49999997, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 337bfa85a75c94b78bfbc18d3b8a28d9
+      spriteID: f3081a9530a104f929b87d243e2e0e86
       internalID: -152972850
       vertices: []
       indices: 
@@ -342,14 +342,14 @@ TextureImporter:
         y: 0
         width: 480
         height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1b3a9a4db9444fc29edb119c549cfab
+      spriteID: 877c672392b9747dda2c4d704d48711b
       internalID: 674668072
       vertices: []
       indices: 
@@ -363,14 +363,14 @@ TextureImporter:
         y: 0
         width: 480
         height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f98b7f99392a4e56b8d7071c30af33a
+      spriteID: ceb93a18ba569448fad1c9f7339fdad9
       internalID: -921369808
       vertices: []
       indices: 
@@ -384,14 +384,14 @@ TextureImporter:
         y: 0
         width: 480
         height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac1cadb3e871140d8a7fcd9e8cb4b97a
+      spriteID: f35948fe6b0fd41179f25ac904af8160
       internalID: 1794956204
       vertices: []
       indices: 

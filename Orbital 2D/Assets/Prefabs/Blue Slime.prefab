@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7457255321303086748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!50 &-850788094886502665
 Rigidbody2D:
   serializedVersion: 4
@@ -122,10 +122,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.025501251, y: -1.0880358}
+  m_Offset: {x: 0.02, y: 0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.25}
     oldSize: {x: 4.7999997, y: 4.8007812}
     newSize: {x: 4.7999997, y: 4.8007812}
     adaptiveTilingThreshold: 0.5
@@ -133,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.94087315, y: 0.7546482}
+  m_Size: {x: 0.9, y: 0.7}
   m_EdgeRadius: 0
 --- !u!95 &8403539350193207476
 Animator:
@@ -173,4 +173,4 @@ MonoBehaviour:
   attack: 10
   moveSpeed: 2
   target: {fileID: 0}
-  attackRadius: 1.5
+  attackRadius: 1
