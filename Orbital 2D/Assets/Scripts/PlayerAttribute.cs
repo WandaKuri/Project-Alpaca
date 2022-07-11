@@ -9,6 +9,9 @@ public class PlayerAttribute : MonoBehaviour
     public int experience;
     public int experienceToNextLevel;
 
+    public int health;
+    public int attack;
+
     // Start is called before the first frame update
     void Start()
     {
