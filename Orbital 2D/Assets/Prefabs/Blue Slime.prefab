@@ -96,14 +96,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7457255321303086748}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -167,10 +167,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a020797c7f4704e84a16a95801e1f02f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: 0
+  maxHealth: 0
   health: 100
   enemyName: Blue Slime
-  experience: 50
-  attack: 10
-  moveSpeed: 2
+  baseAttack: 0
+  moveSpeed: 1.5
   target: {fileID: 0}
-  attackRadius: 1
+  chaseRadius: 5
+  attackRadius: 1.2
+  homePosition: {fileID: 0}
+  anim: {fileID: 0}

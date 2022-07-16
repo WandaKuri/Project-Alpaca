@@ -2,26 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EnemyState{
+    idle,
+    walk,
+    attack,
+    stagger
+}
 public class Enemy : MonoBehaviour
 {
-    public int health;
-
+    public EnemyState currentState;
+    public float maxHealth;
+    public float health;
     public string enemyName;
-
-    public int experience;
-
-    public int attack;
-
+    public int baseAttack;
     public float moveSpeed;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
-        
+        health = 100;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void TakeDamage(float damage)
     {
-        
+        health -= damage;
+        if (health <= 0)
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
+
+    public void Knock(Rigidbody2D myRigidbody, float knockTime, float damage)
+    {
+        StartCoroutine(KnockCo(myRigidbody, knockTime));
+        TakeDamage(damage);
+    }
+
+    private IEnumerator KnockCo(Rigidbody2D myRigidbody, float knockTime)
+    {
+        if (myRigidbody != null)
+        {
+            yield return new WaitForSeconds(knockTime);
+            myRigidbody.velocity = Vector2.zero;
+            currentState = EnemyState.idle;
+            myRigidbody.velocity = Vector2.zero;
+        }
     }
 }
