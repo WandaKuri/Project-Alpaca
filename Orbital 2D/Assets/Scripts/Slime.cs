@@ -6,19 +6,21 @@ public class Slime : Enemy
 {
     
     private Rigidbody2D myRigidbody;
+    private BoxCollider2D myBoxCollider;
     public Transform target;
     public float chaseRadius;
     public float attackRadius;
     public Transform homePosition;
     public Animator anim;
-
-
+    
 	// Use this for initialization
 	void Start () {
         currentState = EnemyState.idle;
         myRigidbody = GetComponent<Rigidbody2D>();
+        myBoxCollider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
+        Physics2D.IgnoreCollision(myBoxCollider, target.GetComponent<CircleCollider2D>());
 	}
 	
 	// Update is called once per frame
