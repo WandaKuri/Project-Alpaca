@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  maxHealth: 0
+  maxHealth: 100
   health: 100
   enemyName: Blue Slime
   baseAttack: 0
