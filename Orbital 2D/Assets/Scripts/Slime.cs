@@ -11,17 +11,16 @@ public class Slime : Enemy
     public Transform target;
     public float chaseRadius;
     public float attackRadius;
-    public Transform homePosition;
     public Animator anim;
     
 	// Use this for initialization
 	void Start () {
-        currentState = EnemyState.idle;
-        myRigidbody = GetComponent<Rigidbody2D>();
-        myBoxCollider = GetComponent<BoxCollider2D>();
-        mySpriteRenderer = GetComponent<SpriteRenderer>();
-        anim = GetComponent<Animator>();
-        target = GameObject.FindWithTag("Player").transform;
+        this.currentState = EnemyState.idle;
+        this.myRigidbody = gameObject.GetComponent<Rigidbody2D>();
+        this.myBoxCollider = gameObject.GetComponent<BoxCollider2D>();
+        this.mySpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        this.anim = GetComponent<Animator>();
+        this.target = GameObject.FindWithTag("Player").transform;
         Physics2D.IgnoreCollision(myBoxCollider, target.GetComponent<CircleCollider2D>());
 	}
 	
@@ -32,7 +31,7 @@ public class Slime : Enemy
 
     void CheckDistance()
     {
-        if(Vector3.Distance(target.position, transform.position) <= chaseRadius
+        if (Vector3.Distance(target.position, transform.position) <= chaseRadius
            && Vector3.Distance(target.position, transform.position) > attackRadius)
         {
             if (currentState == EnemyState.idle 
@@ -47,7 +46,8 @@ public class Slime : Enemy
                 anim.SetBool("wakeUp", true);
                 this.SetFacingDirection();
             }
-        } else if (Vector3.Distance(target.position,transform.position) > chaseRadius)
+        } 
+        else if (Vector3.Distance(target.position,transform.position) > chaseRadius)
         {
             anim.SetBool("wakeUp", false);
             ChangeState(EnemyState.idle);
@@ -60,7 +60,8 @@ public class Slime : Enemy
         mySpriteRenderer.flipX = difference > 0;
     }
     
-    private void ChangeState(EnemyState newState){
+    private void ChangeState(EnemyState newState)
+    {
         if (currentState != newState)
         {
             currentState = newState;

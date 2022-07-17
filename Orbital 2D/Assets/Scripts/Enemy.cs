@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EnemyState{
+public enum EnemyState 
+{
     idle,
     walk,
     attack,
