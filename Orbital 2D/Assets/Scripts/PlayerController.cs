@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 bottomLeftLimit;
     private Vector3 topRightLimit;
 
+    public bool canMove = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,23 +40,27 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerRigid.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveSpeed;
-        myAnimator.SetFloat("moveX", playerRigid.velocity.x);
-        myAnimator.SetFloat("moveY", playerRigid.velocity.y);
-
-        if (Input.GetAxisRaw("Horizontal") == 1 
-            || Input.GetAxisRaw("Horizontal") == -1 
-            || Input.GetAxisRaw("Vertical") == 1 
-            || Input.GetAxisRaw("Vertical") == -1)
+        if (canMove)
         {
-            myAnimator.SetFloat("lastMoveX", Input.GetAxisRaw("Horizontal"));
-            myAnimator.SetFloat("lastMoveY", Input.GetAxisRaw("Vertical"));
+            playerRigid.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveSpeed;
+            myAnimator.SetFloat("moveX", playerRigid.velocity.x);
+            myAnimator.SetFloat("moveY", playerRigid.velocity.y);
+
+            if (Input.GetAxisRaw("Horizontal") == 1
+                || Input.GetAxisRaw("Horizontal") == -1
+                || Input.GetAxisRaw("Vertical") == 1
+                || Input.GetAxisRaw("Vertical") == -1)
+            {
+                myAnimator.SetFloat("lastMoveX", Input.GetAxisRaw("Horizontal"));
+                myAnimator.SetFloat("lastMoveY", Input.GetAxisRaw("Vertical"));
+            }
+
+            if (Input.GetButtonDown("Attack"))
+            {
+                StartCoroutine(AttackCo());
+            }
         }
         
-        if (Input.GetButtonDown("Attack"))
-        {
-            StartCoroutine(AttackCo());
-        }
     }
 
     private IEnumerator AttackCo()

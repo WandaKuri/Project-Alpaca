@@ -413,7 +413,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5279a445bc7cfda488fdb72bd4ea2071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - It works!
+  - Or does it?
+  - ???
 --- !u!61 &405984110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1945,4 +1948,4 @@ MonoBehaviour:
   - test
   - array
   currentLine: 0
-  instance: {fileID: 0}
+  justStarted: 0

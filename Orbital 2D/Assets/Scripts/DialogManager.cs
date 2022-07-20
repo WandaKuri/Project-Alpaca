@@ -17,7 +17,8 @@ public class DialogManager : MonoBehaviour
 
     public int currentLine;
 
-    public DialogManager instance;
+    public static DialogManager instance;
+    public bool justStarted;
 
 
     // Start is called before the first frame update
@@ -34,23 +35,39 @@ public class DialogManager : MonoBehaviour
         {
             if (Input.GetButtonUp("Fire1"))
             {
-                currentLine++;
+                if (!justStarted)
+                {
+                    currentLine++;
 
-                if(currentLine >= dialogLines.Length)
-                {
-                    dialogBox.SetActive(false);
-                }
-                else
-                {
+                    if (currentLine >= dialogLines.Length)
+                    {
+                        dialogBox.SetActive(false);
+                        PlayerController.instance.canMove = true;
+                    }
+                    else
+                    {
+                        dialogText.text = dialogLines[currentLine];
+                    }
+
                     dialogText.text = dialogLines[currentLine];
+                } else
+                {
+                    justStarted = false;
                 }
-
-                dialogText.text = dialogLines[currentLine];
             }
         }
     }
     public void ShowDialog(string[] newLines)
     {
         dialogLines = newLines;
+
+        currentLine = 0;
+
+        dialogText.text = dialogLines[0];
+        dialogBox.SetActive(true);
+
+        justStarted = true;
+
+        PlayerController.instance.canMove = false;
     }
 }
