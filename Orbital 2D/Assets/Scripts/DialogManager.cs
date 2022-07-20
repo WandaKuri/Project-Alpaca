@@ -46,6 +46,8 @@ public class DialogManager : MonoBehaviour
                     }
                     else
                     {
+                        CheckIfName();
+
                         dialogText.text = dialogLines[currentLine];
                     }
 
@@ -63,11 +65,22 @@ public class DialogManager : MonoBehaviour
 
         currentLine = 0;
 
-        dialogText.text = dialogLines[0];
+        CheckIfName();
+
+        dialogText.text = dialogLines[currentLine];
         dialogBox.SetActive(true);
 
         justStarted = true;
 
         PlayerController.instance.canMove = false;
+    }
+
+    public void CheckIfName()
+    {
+        if (dialogLines[currentLine].StartsWith("n-"))
+        {
+            nameText.text = dialogLines[currentLine].Replace("n-","");
+            currentLine++;
+        }
     }
 }

@@ -414,9 +414,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - It works!
-  - Or does it?
-  - ???
+  - n-Girl
+  - Please help me!
+  - n-Player
+  - Is everything okay?
+  - n-Girl
+  - No!
+  - My family was kidnapped!
+  - n-Player
+  - Don't worry
+  - I'll save them
 --- !u!61 &405984110
 BoxCollider2D:
   m_ObjectHideFlags: 0
