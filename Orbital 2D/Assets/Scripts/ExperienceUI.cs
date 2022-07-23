@@ -15,7 +15,6 @@ public class ExperienceUI : MonoBehaviour
     {
         this.textDisplay = this.gameObject.GetComponent<TextMeshProUGUI>();
         this.attributes = GameObject.FindWithTag("Player").GetComponent<PlayerAttribute>();
-        Debug.Log(this.attributes);
         this.textDisplay.text = "Experience: " + this.attributes.experience.ToString() + " / " + this.attributes.experienceToNextLevel.ToString();
     }
 
