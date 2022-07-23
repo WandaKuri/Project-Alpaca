@@ -5,9 +5,6 @@ using UnityEngine;
 public class Slime : Enemy
 {
     
-    private Rigidbody2D myRigidbody;
-    private BoxCollider2D myBoxCollider;
-    private SpriteRenderer mySpriteRenderer;
     public Transform target;
     public float chaseRadius;
     public float attackRadius;
@@ -19,6 +16,7 @@ public class Slime : Enemy
         this.myRigidbody = gameObject.GetComponent<Rigidbody2D>();
         this.myBoxCollider = gameObject.GetComponent<BoxCollider2D>();
         this.mySpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        this.mySpriteRenderer.enabled = true;
         this.anim = GetComponent<Animator>();
         this.target = GameObject.FindWithTag("Player").transform;
         Physics2D.IgnoreCollision(myBoxCollider, target.GetComponent<CircleCollider2D>());
@@ -31,23 +29,23 @@ public class Slime : Enemy
 
     void CheckDistance()
     {
-        if (Vector3.Distance(target.position, transform.position) <= chaseRadius
-           && Vector3.Distance(target.position, transform.position) > attackRadius)
+        if (Vector3.Distance(this.target.position, this.transform.position) <= this.chaseRadius
+           && Vector3.Distance(this.target.position, this.transform.position) > this.attackRadius)
         {
-            if (currentState == EnemyState.idle 
-                || currentState == EnemyState.walk
-                && currentState != EnemyState.stagger)
+            if (this.currentState == EnemyState.idle 
+                || this.currentState == EnemyState.walk
+                && this.currentState != EnemyState.stagger)
             {
                 Vector3 temp = Vector3.MoveTowards(transform.position,
                                                          target.position,
                                                          moveSpeed * Time.deltaTime);
-                myRigidbody.MovePosition(temp);
+                this.myRigidbody.MovePosition(temp);
                 ChangeState(EnemyState.walk);
-                anim.SetBool("wakeUp", true);
+                this.anim.SetBool("wakeUp", true);
                 this.SetFacingDirection();
             }
         } 
-        else if (Vector3.Distance(target.position,transform.position) > chaseRadius)
+        else if (Vector3.Distance(this.target.position,this.transform.position) > this.chaseRadius)
         {
             anim.SetBool("wakeUp", false);
             ChangeState(EnemyState.idle);
@@ -56,15 +54,15 @@ public class Slime : Enemy
 
     private void SetFacingDirection()
     {
-        float difference = target.position.x - transform.position.x;
-        mySpriteRenderer.flipX = difference > 0;
+        float difference = this.target.position.x - this.transform.position.x;
+        this.mySpriteRenderer.flipX = difference > 0;
     }
     
     private void ChangeState(EnemyState newState)
     {
-        if (currentState != newState)
+        if (this.currentState != newState)
         {
-            currentState = newState;
+            this.currentState = newState;
         }
     }
 }

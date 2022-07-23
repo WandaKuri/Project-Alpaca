@@ -11,25 +11,37 @@ public enum EnemyState
 }
 public class Enemy : MonoBehaviour
 {
+    
     public EnemyState currentState;
+    public GameObject enemy;
+    public string enemyName;
     public float maxHealth;
     public float health;
-    public string enemyName;
-    public int baseAttack;
     public float moveSpeed;
+    public int baseAttack;
+    protected Rigidbody2D myRigidbody;
+    protected BoxCollider2D myBoxCollider;
+    protected SpriteRenderer mySpriteRenderer;
 
     private void Awake()
     {
-        health = 100;
+        this.health = this.maxHealth;
     }
 
     private void TakeDamage(float damage)
     {
-        health -= damage;
+        this.health -= damage;
         if (health <= 0)
         {
-            this.gameObject.SetActive(false);
+            mySpriteRenderer.enabled = false;
+            Invoke("Respawn", 5);
         }
+    }
+
+    private void Respawn()
+    {
+        Instantiate(this.enemy);
+        Destroy(this.gameObject);
     }
 
     public void Knock(Rigidbody2D myRigidbody, float knockTime, float damage)

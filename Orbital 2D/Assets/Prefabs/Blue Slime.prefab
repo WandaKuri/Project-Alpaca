@@ -173,8 +173,8 @@ MonoBehaviour:
   enemyName: Blue Slime
   baseAttack: 0
   moveSpeed: 1.5
+  enemy: {fileID: 7457255321303086748}
   target: {fileID: 0}
   chaseRadius: 5
   attackRadius: 1
-  homePosition: {fileID: 0}
   anim: {fileID: 0}
