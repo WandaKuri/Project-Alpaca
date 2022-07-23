@@ -168,13 +168,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  enemy: {fileID: 7457255321303086748}
+  enemyName: Blue Slime
   maxHealth: 100
   health: 100
-  enemyName: Blue Slime
-  baseAttack: 0
   moveSpeed: 1.5
-  enemy: {fileID: 7457255321303086748}
+  experience: 20
+  baseAttack: 5
   target: {fileID: 0}
   chaseRadius: 5
-  attackRadius: 1
+  attackRadius: 0.5
   anim: {fileID: 0}
