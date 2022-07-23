@@ -8,7 +8,6 @@ public class PlayerAttribute : MonoBehaviour
     public int level;
     public int experience;
     public int experienceToNextLevel;
-
     public int health;
     public int attack;
 
@@ -22,12 +21,17 @@ public class PlayerAttribute : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.Space))
+    }
+
+    public void ReceiveDamage(int damage)
+    {
+        this.health -= damage;
+        if (this.health <= 0)
         {
-            this.AddExperience(20); // Placeholder for testing Experience & Leveling
+            this.gameObject.SetActive(false);
         }
     }
-    
+
     public void AddExperience(int amount)
     {
         this.experience += amount;

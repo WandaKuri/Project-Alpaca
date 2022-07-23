@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Slime : Enemy
 {
-    
+
     public Transform target;
     public float chaseRadius;
     public float attackRadius;
@@ -18,8 +18,9 @@ public class Slime : Enemy
         this.mySpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         this.mySpriteRenderer.enabled = true;
         this.anim = GetComponent<Animator>();
-        this.target = GameObject.FindWithTag("Player").transform;
-        Physics2D.IgnoreCollision(myBoxCollider, target.GetComponent<CircleCollider2D>());
+        this.player = GameObject.FindWithTag("Player");
+        this.target = this.player.transform;
+        Physics2D.IgnoreCollision(myBoxCollider, this.player.GetComponent<CircleCollider2D>());
 	}
 	
 	// Update is called once per frame
