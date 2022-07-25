@@ -424,7 +424,7 @@ MonoBehaviour:
   - Is everything okay?
   - n-Girl
   - No!
-  - My family was kidnapped!
+  - My family was kidnapped by the slimes!
   - n-Player
   - Don't worry
   - I'll save them
@@ -1521,6 +1521,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1698365781, guid: 91d33169cc18549cebff1a286623735f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1528.355
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698365781, guid: 91d33169cc18549cebff1a286623735f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -274.913
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698365781, guid: 91d33169cc18549cebff1a286623735f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -764.177
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698365781, guid: 91d33169cc18549cebff1a286623735f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 246.568
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015478436, guid: 91d33169cc18549cebff1a286623735f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8407111339104749195, guid: 91d33169cc18549cebff1a286623735f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
