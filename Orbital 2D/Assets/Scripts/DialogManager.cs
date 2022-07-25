@@ -75,7 +75,7 @@ public class DialogManager : MonoBehaviour
         PlayerController.instance.canMove = false;
     }
 
-    public void CheckIfName()
+    private void CheckIfName()
     {
         if (dialogLines[currentLine].StartsWith("n-"))
         {

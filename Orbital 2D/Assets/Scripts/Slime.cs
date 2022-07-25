@@ -28,7 +28,7 @@ public class Slime : Enemy
         CheckDistance();
     }
 
-    void CheckDistance()
+    private void CheckDistance()
     {
         if (Vector3.Distance(this.target.position, this.transform.position) <= this.chaseRadius
            && Vector3.Distance(this.target.position, this.transform.position) > this.attackRadius)
