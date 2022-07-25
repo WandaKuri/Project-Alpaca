@@ -30,8 +30,9 @@ public class Slime : Enemy
 
     private void CheckDistance()
     {
-        if (Vector3.Distance(this.target.position, this.transform.position) <= this.chaseRadius
-           && Vector3.Distance(this.target.position, this.transform.position) > this.attackRadius)
+        if (Enemy.canMove 
+            && Vector3.Distance(this.target.position, this.transform.position) <= this.chaseRadius 
+            && Vector3.Distance(this.target.position, this.transform.position) > this.attackRadius)
         {
             if (this.currentState == EnemyState.idle 
                 || this.currentState == EnemyState.walk

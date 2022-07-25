@@ -8,13 +8,13 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
+    
     public UnityEngine.UI.Text dialogText;
     public UnityEngine.UI.Text nameText;
     public GameObject dialogBox;
     public GameObject nameBox;
 
     public string[] dialogLines;
-
     public int currentLine;
 
     public static DialogManager instance;
@@ -31,7 +31,7 @@ public class DialogManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(dialogBox.activeInHierarchy)
+        if (dialogBox.activeInHierarchy)
         {
             if (Input.GetButtonUp("Fire1"))
             {
@@ -42,7 +42,8 @@ public class DialogManager : MonoBehaviour
                     if (currentLine >= dialogLines.Length)
                     {
                         dialogBox.SetActive(false);
-                        PlayerController.instance.canMove = true;
+                        PlayerController.instance.setMovement(true);
+                        Enemy.setMovement(true);
                     }
                     else
                     {
@@ -72,7 +73,8 @@ public class DialogManager : MonoBehaviour
 
         justStarted = true;
 
-        PlayerController.instance.canMove = false;
+        PlayerController.instance.setMovement(false);
+        Enemy.setMovement(false);
     }
 
     private void CheckIfName()

@@ -16,17 +16,19 @@ public class GameMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (theMenu.activeInHierarchy)
             {
                 theMenu.SetActive(false);
-                PlayerController.instance.canMove = true;
+                PlayerController.instance.setMovement(true);
+                Enemy.setMovement(true);
             }
             else
             {
                 theMenu.SetActive(true);
-                PlayerController.instance.canMove = false;
+                PlayerController.instance.setMovement(false);
+                Enemy.setMovement(false);
             }
         }
     }
@@ -36,12 +38,14 @@ public class GameMenu : MonoBehaviour
         if (theMenu.activeInHierarchy)
         {
             theMenu.SetActive(false);
-            PlayerController.instance.canMove = true;
+            PlayerController.instance.setMovement(true);
+            Enemy.setMovement(true);
         }
         else
         {
             theMenu.SetActive(true);
-            PlayerController.instance.canMove = false;
+            PlayerController.instance.setMovement(false);
+            Enemy.setMovement(false);
         }
     }
 

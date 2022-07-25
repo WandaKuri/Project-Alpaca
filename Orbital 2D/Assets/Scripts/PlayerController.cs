@@ -11,12 +11,11 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
     public string areaTransitionName;
     
+    private bool canMove = true;
     private Transform bottomLeftBox;
     private Transform topRightBox;
     private Vector3 bottomLeftLimit;
     private Vector3 topRightLimit;
-
-    public bool canMove = true;
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +64,11 @@ public class PlayerController : MonoBehaviour
             playerRigid.velocity = Vector2.zero;
         }
         
+    }
+
+    public void setMovement(bool canMove)
+    {
+        this.canMove = canMove;
     }
 
     private IEnumerator AttackCo()

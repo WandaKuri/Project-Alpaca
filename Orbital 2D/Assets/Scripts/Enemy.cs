@@ -13,6 +13,7 @@ public enum EnemyState
 public class Enemy : MonoBehaviour
 {
     
+    public static bool canMove = true;
     public EnemyState currentState;
     public GameObject enemy;
     public string enemyName;
@@ -51,6 +52,11 @@ public class Enemy : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    public static void setMovement(bool canMove)
+    {
+        Enemy.canMove = canMove;
+    }
+    
     public void Knock(Rigidbody2D myRigidbody, float knockTime, float damage)
     {
         StartCoroutine(KnockCo(myRigidbody, knockTime));
