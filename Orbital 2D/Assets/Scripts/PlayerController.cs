@@ -60,6 +60,10 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(AttackCo());
             }
         }
+        else
+        {
+            playerRigid.velocity = Vector2.zero;
+        }
         
     }
 
