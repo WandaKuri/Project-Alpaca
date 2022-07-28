@@ -63,7 +63,9 @@ public class PlayerController : MonoBehaviour
         {
             playerRigid.velocity = Vector2.zero;
         }
-        
+
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
+
     }
 
     public void setMovement(bool canMove)
