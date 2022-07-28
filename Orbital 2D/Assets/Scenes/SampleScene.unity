@@ -426,8 +426,8 @@ MonoBehaviour:
   - No!
   - My family was kidnapped by the slimes!
   - n-Player
-  - Don't worry
-  - I'll save them
+  - Don't worry.
+  - I'll save them.
 --- !u!61 &405984110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1527,7 +1527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698365781, guid: 91d33169cc18549cebff1a286623735f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -274.913
+      value: -170.292
       objectReference: {fileID: 0}
     - target: {fileID: 1698365781, guid: 91d33169cc18549cebff1a286623735f, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1535,7 +1535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698365781, guid: 91d33169cc18549cebff1a286623735f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 246.568
+      value: 194.257
       objectReference: {fileID: 0}
     - target: {fileID: 2015478436, guid: 91d33169cc18549cebff1a286623735f, type: 3}
       propertyPath: m_IsActive
